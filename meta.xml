@@ -14,7 +14,7 @@
 				<itemName><%= image.metadata.title %></itemName>
 				<itemId><%= image.imageID %></itemId>
 				<itemFile>
-					<small><%= image.exportFilename %>.jpg</small>
+					<small><%= model.photoSizes.small.directory %>/<%= image.exportFilename %>.jpg</small>
 					<large><%= image.exportFilename %>.jpg</large>
 					<thumb><%= model.photoSizes.thumb.directory %>/<%= image.exportFilename %>.jpg</thumb>
 				</itemFile>
