@@ -1,5 +1,5 @@
-bandXaargau.lrwebengine
-=======================
+musikfestwochen.lrwebengine
+===========================
 
 An Adobe Lightroom Web Gallery that allows me to publish concert photo galleries
 for the [Winterthurer Musikfestwochen](http://www.musikfestwochen.ch) festival
