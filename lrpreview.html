@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>$model.metadata.galleryName.value</title>
+</head>
+<body>
+<h1>$model.metadata.galleryName.value</h1>
+<ol>
+<%
+  for i=1,numImages,1 do
+    local image = getImage(i)
+    %>
+    <li>
+      <img
+        src="thumb/<%= image.exportFilename %>.jpg"
+        id="ID<%= image.imageID %>_thumb"
+        width="$image.renditions.thumb.width"
+        height="$image.renditions.thumb.height"
+        alt="$image.metadata.title">
+    </li>
+  <% end %>
+</ol>
+</body>
+</html>

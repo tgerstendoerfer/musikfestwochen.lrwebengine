@@ -1,0 +1,16 @@
+--[[
+	Lightroom Web Gallery manifest.
+	Maps template files to the actual files to be produced.
+]]
+
+importTags( "lr", "com.adobe.lightroom.default" )
+
+AddPage {
+	filename='meta.xml',
+	template='meta.xml',
+}
+
+AddPage {
+	filename='lrpreview.html',
+	filename='lrpreview.html',
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<info>
+		<description>$model.metadata.galleryName.value</description>
+	</info>
+	<galleryElements>
+		<%
+		for i=1,numImages,1 do
+			image = getImage(i)
+		%>
+			<mediaItem>
+				<itemSort><%= i %></itemSort>
+				<itemType></itemType>
+				<itemName><%= image.metadata.title %></itemName>
+				<itemId><%= image.imageID %></itemId>
+				<itemFile>
+					<small><%= image.exportFilename %>.jpg</small>
+					<large><%= image.exportFilename %>.jpg</large>
+					<thumb><%= model.photoSizes.thumb.directory %>/<%= image.exportFilename %>.jpg</thumb>
+				</itemFile>
+			</mediaItem>
+		<% end %>
+	</galleryElements>
+</data>
