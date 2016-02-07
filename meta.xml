@@ -10,7 +10,7 @@
 		%>
 			<mediaItem>
 				<itemSort><%= i %></itemSort>
-				<itemType></itemType>
+				<itemType>Image</itemType>
 				<itemName><%= image.metadata.title %></itemName>
 				<itemId><%= image.imageID %></itemId>
 				<itemFile>
