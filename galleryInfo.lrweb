@@ -8,8 +8,8 @@ return {
 	maximumGallerySize = 50000,
 	model = {
 		["photoSizes.large.directory"] = ".",
-		["photoSizes.large.height"] = function() return photoSizes.large.width end,
-		["photoSizes.large.width"] = 1500,
+		["photoSizes.large.height"] = 1080,
+		["photoSizes.large.width"] = 1620,
 		["photoSizes.large.maxHeight"] = 2701,
 		["photoSizes.large.maxWidth"] = 2701,
 		["photoSizes.large.metadataExportMode"] = function() return photoSizes.thumb.metadataExportMode end,
