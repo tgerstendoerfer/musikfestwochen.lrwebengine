@@ -29,6 +29,7 @@ return {
 		["lightroomApplication.jpegQuality"] = 85,
 		["lightroomApplication.sizeBeingViewed"] = "thumb",
 		["lightroomApplication.useWatermark"] = false,
+		["lightroomApplication.watermarkID"] = "",
 		["metadata.groupDescription.value"] = LOC "$$$/AgWPG/Templates/HTML/DefaultValues/ExampleGroupDescription=",
 		["metadata.galleryName.value"] = LOC "$$$/AgWPG/Templates/HTML/DefaultValues/ExampleGalleryName=Title",
 
@@ -153,13 +154,7 @@ return {
 						bindingValue = "photoSizes.thumb.metadataExportMode",
 					},
 				},
-				WPGPanelUI.slider_content_column {
-					WPGPanelUI.checkbox_row {
-						title = LOC( "$$$/AgWPG/Templates/HTML/Panel/Checkbox/UseWatermark=Add Copyright Watermark" ),
-						bindingValue = [[lightroomApplication.useWatermark]],
-						indentWithSliders=true,
-					},
-				},
+				f:watermark_section( controller ),
 			},
 		},
 	}
