@@ -9,7 +9,6 @@
 			image = getImage(i)
 		%>
 			<mediaItem>
-				<itemSort><%= i %></itemSort>
 				<itemType>Image</itemType>
 				<itemName><%= image.metadata.title %></itemName>
 				<itemId><%= image.imageID %></itemId>
