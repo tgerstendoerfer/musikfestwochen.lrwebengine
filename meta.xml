@@ -4,6 +4,13 @@
 		<galleryName>$model.metadata.galleryName.value</galleryName>
 		<description>$model.metadata.groupDescription.value</description>
 
+		<% image = getImage(1) %>
+		<% if not model.filterType.Stimmung then %>
+		<galleryFilterCategories>
+			<itemName>$image.metadata.location</itemName>
+		</galleryFilterCategories>
+		<% end %>
+
 		<galleryFilterType>
 
 			<% if model.filterType.Konzerte then %>
