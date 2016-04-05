@@ -1,6 +1,6 @@
 return {
 	LrSdkVersion = 5.0,
-	LrSdkMinimumVersion = 1.3, -- minimum SDK version required by this plugin
+	LrSdkMinimumVersion = 2.0, -- minimum SDK version required by this plugin
 
 	title = LOC "$$$/GalleryName/Title=Winterthurer Musikfestwochen",
 	id = "ch.musikfestwochen.gallery.2016",
@@ -85,61 +85,27 @@ return {
 		local bind = LrView.bind
 		return { 
 
-		labels = WPGPanelUI.mainView {
+		labels = f:panel_content {
 			bindToObject = controller,
-			WPGPanelUI.subdivided_sections {
-				WPGPanelUI.content_column {
-					WPGPanelUI.row {
-						f:static_text  {
-							title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/GalleryNameTitle=Gallery Title",
-						},
-						f:mru_popup_view {
-							place_horizontal = 1,
-							place_vertical = 0.5,
-							boundEditValue = bind "metadata.galleryName.value",
-							boundEditTracking = bind "metadata.galleryName.tracking",
-							preferenceKey = "galleryName"
-						},
-					},
-					WPGPanelUI.TextInput {
-						resize_to_fit_text_height = true,
-						maximumLength = 1600,
-						value = bind "metadata.galleryName.value",
-						tracking = bind "metadata.galleryName.tracking",
-						text_color=AgPanel.bright_text_color,
-					},
+			f:subdivided_sections {
+				f:labeled_text_input  {
+					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/GalleryNameTitle=Gallery Title",
+					value = bind "metadata.galleryName.value",
 				},
-				WPGPanelUI.content_column {
-					WPGPanelUI.row {
-						f:static_text  {
-							title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/GroupDescription=Collection Description",
-						},
-						f:mru_popup_view {
-							place_horizontal = 1,
-							place_vertical = 0.5,
-							boundEditValue = bind "metadata.groupDescription.value",
-							boundEditTracking = bind "metadata.groupDescription.tracking",
-							preferenceKey = "groupDescription"
-						},
-					},
-					WPGPanelUI.TextInput {
-						resize_to_fit_text_height = true,
-						maximumLength = 3200,
-						value = bind "metadata.groupDescription.value",
-						tracking = bind "metadata.groupDescription.tracking",
-						text_color=AgPanel.bright_text_color,
-					},
+				f:labeled_text_input {
+					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/GroupDescription=Collection Description",
+					value = bind "metadata.groupDescription.value",
 				},
 			},
 		},
-		outputSettings = WPGPanelUI.mainView {
+		outputSettings = f:panel_content {
 			bindToObject = controller,
-			WPGPanelUI.subdivided_sections {
-				WPGPanelUI.header_section_label {
+			f:subdivided_sections {
+				f:header_section_label {
 					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/ImageHandling=Large Images",
 				},
-				WPGPanelUI.slider_content_column {
-					WPGPanelUI.slider_row {
+				f:slider_content_column {
+					f:slider_row {
 						title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/MaximumImageSizeLabel/JPEGQualityLabel=Quality",
 						property = "lightroomApplication.jpegQuality",
 						tracking = "lightroomApplication.jpegQuality.tracking",
@@ -150,7 +116,7 @@ return {
 						width_in_digits = 4,
 						precision = 0,
 					},
-					WPGPanelUI.metadataModeControl {
+					f:metadataModeControl {
 						bindingValue = "photoSizes.thumb.metadataExportMode",
 					},
 				},
