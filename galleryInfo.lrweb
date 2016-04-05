@@ -33,6 +33,13 @@ return {
 		["metadata.groupDescription.value"] = LOC "$$$/AgWPG/Templates/HTML/DefaultValues/ExampleGroupDescription=",
 		["metadata.galleryName.value"] = LOC "$$$/AgWPG/Templates/HTML/DefaultValues/ExampleGalleryName=Title",
 
+		["filterType.Konzerte"] = false,
+		["filterType.Kleinkunst"] = false,
+		["filterType.Stimmung"] = false,
+		["filterType.Helfer"] = false,
+		["filterType.Kostenlos"] = false,
+		["filterType.Kostenpflichtig"] = false,
+
 		["metadata.homePage.value"] = {
 			value = "lrpreview.html",
 			metadata = { [ 'ag:dataType' ] = 'webLink' },
@@ -95,6 +102,34 @@ return {
 				f:labeled_text_input {
 					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/GroupDescription=Collection Description",
 					value = bind "metadata.groupDescription.value",
+				},
+			},
+			f:subdivided_sections {
+				f:content_column {
+					f:checkbox_row {
+						title = "Konzerte",
+						value = bind "filterType.Konzerte",
+					},
+					f:checkbox_row {
+						title = "Kleinkunst",
+						value = bind "filterType.Kleinkunst",
+					},
+					f:checkbox_row {
+						title = "Stimmung",
+						value = bind "filterType.Stimmung",
+					},
+					f:checkbox_row {
+						title = "Helfer",
+						value = bind "filterType.Helfer",
+					},
+					f:checkbox_row {
+						title = "Kostenlose Konzerte",
+						value = bind "filterType.Kostenlos",
+					},
+					f:checkbox_row {
+						title = "Hauptkonzerte",
+						value = bind "filterType.Kostenpflichtig",
+					},
 				},
 			},
 		},
