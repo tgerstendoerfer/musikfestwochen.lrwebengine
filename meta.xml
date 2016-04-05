@@ -3,6 +3,7 @@
 	<info>
 		<galleryName>$model.metadata.galleryName.value</galleryName>
 		<description>$model.metadata.groupDescription.value</description>
+		<galleryDate>$model.metadata.galleryDate.value</galleryDate>
 
 		<% image = getImage(1) %>
 		<% if not model.filterType.Stimmung then %>

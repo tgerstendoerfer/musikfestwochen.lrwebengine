@@ -32,6 +32,7 @@ return {
 		["lightroomApplication.watermarkID"] = "",
 		["metadata.groupDescription.value"] = LOC "$$$/AgWPG/Templates/HTML/DefaultValues/ExampleGroupDescription=",
 		["metadata.galleryName.value"] = LOC "$$$/AgWPG/Templates/HTML/DefaultValues/ExampleGalleryName=Title",
+		["metadata.galleryDate.value"] = "YYYY-MM-DD",
 
 		["filterType.Konzerte"] = false,
 		["filterType.Kleinkunst"] = false,
@@ -102,6 +103,10 @@ return {
 				f:labeled_text_input {
 					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/GroupDescription=Collection Description",
 					value = bind "metadata.groupDescription.value",
+				},
+				f:labeled_text_input {
+					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/GalleryDate=Date (YYYY-MM-DD)",
+					value = bind "metadata.galleryDate.value",
 				},
 			},
 			f:subdivided_sections {
