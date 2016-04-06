@@ -5,12 +5,21 @@
 		<description>$model.metadata.groupDescription.value</description>
 		<galleryDate>$model.metadata.galleryDate.value</galleryDate>
 
-		<% image = getImage(1) %>
-		<% if not model.filterType.Stimmung then %>
 		<galleryFilterCategories>
-			<itemName>$image.metadata.location</itemName>
+
+			<% if model.filterCategory.Steinberggasse then %>
+			<filterItem>steinberggasse</filterItem>
+			<% end %>
+
+			<% if model.filterCategory.Kirchplatz then %>
+			<filterItem>kirchplatz</filterItem>
+			<% end %>
+
+			<% if model.filterCategory.Roulotte then %>
+			<filterItem>roulotte-am-graben</filterItem>
+			<% end %>
+
 		</galleryFilterCategories>
-		<% end %>
 
 		<galleryFilterType>
 

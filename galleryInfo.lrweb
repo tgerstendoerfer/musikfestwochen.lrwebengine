@@ -34,6 +34,10 @@ return {
 		["metadata.galleryName.value"] = LOC "$$$/AgWPG/Templates/HTML/DefaultValues/ExampleGalleryName=Title",
 		["metadata.galleryDate.value"] = "YYYY-MM-DD",
 
+		["filterCategory.Steinberggasse"] = false,
+		["filterCategory.Kirchplatz"] = false,
+		["filterCategory.Roulotte"] = false,
+
 		["filterType.Konzerte"] = false,
 		["filterType.Kleinkunst"] = false,
 		["filterType.ClubsBars"] = false,
@@ -111,6 +115,26 @@ return {
 				},
 			},
 			f:subdivided_sections {
+				f:header_section_label {
+					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/FilterCategory=Gallery Category Filter",
+				},
+				f:content_column {
+					f:checkbox_row {
+						title = "Steinberggasse",
+						value = bind "filterCategory.Steinberggasse",
+					},
+					f:checkbox_row {
+						title = "Kirchplatz",
+						value = bind "filterCategory.Kirchplatz",
+					},
+					f:checkbox_row {
+						title = "Roulotte am Graben",
+						value = bind "filterCategory.Roulotte",
+					},
+				},
+				f:header_section_label {
+					title = LOC "$$$/AgWPG/Templates/HTML/Panel/Labels/FilterType=Gallery Type Filter",
+				},
 				f:content_column {
 					f:checkbox_row {
 						title = "Konzerte",
