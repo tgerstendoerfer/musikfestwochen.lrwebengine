@@ -15,27 +15,31 @@
 		<galleryFilterType>
 
 			<% if model.filterType.Konzerte then %>
-			<filterItem>Konzerte</filterItem>
+			<filterItem>konzerte</filterItem>
 			<% end %>
 
 			<% if model.filterType.Kleinkunst then %>
-			<filterItem>Kleinkunst</filterItem>
+			<filterItem>kleinkunst-film</filterItem>
+			<% end %>
+
+			<% if model.filterType.ClubsBars then %>
+			<filterItem>clubs-bars</filterItem>
 			<% end %>
 
 			<% if model.filterType.Stimmung then %>
-			<filterItem>Stimmung</filterItem>
+			<filterItem>stimmung</filterItem>
 			<% end %>
 
 			<% if model.filterType.Helfer then %>
-			<filterItem>Helfer</filterItem>
+			<filterItem>helfer</filterItem>
 			<% end %>
 
 			<% if model.filterType.Kostenlos then %>
-			<filterItem>Kostenloses-Hauptprogramm</filterItem>
+			<filterItem>kostenlos</filterItem>
 			<% end %>
 
 			<% if model.filterType.Kostenpflichtig then %>
-			<filterItem>Kostenpflchtiges-Hauptprogramm</filterItem>
+			<filterItem>kostenpflichtig</filterItem>
 			<% end %>
 
 		</galleryFilterType>  
