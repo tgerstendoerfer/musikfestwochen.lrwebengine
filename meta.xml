@@ -43,6 +43,10 @@
 			<filterItem>helfer</filterItem>
 			<% end %>
 
+			<% if model.filterType.Kinder then %>
+			<filterItem>kinder</filterItem>
+			<% end %>
+
 			<% if model.filterType.Kostenlos then %>
 			<filterItem>kostenlos</filterItem>
 			<% end %>

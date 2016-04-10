@@ -43,6 +43,7 @@ return {
 		["filterType.ClubsBars"] = false,
 		["filterType.Stimmung"] = false,
 		["filterType.Helfer"] = false,
+		["filterType.Kinder"] = false,
 		["filterType.Kostenlos"] = false,
 		["filterType.Kostenpflichtig"] = false,
 
@@ -155,6 +156,10 @@ return {
 					f:checkbox_row {
 						title = "Helfer",
 						value = bind "filterType.Helfer",
+					},
+					f:checkbox_row {
+						title = "Kinder",
+						value = bind "filterType.Kinder",
 					},
 					f:checkbox_row {
 						title = "Kostenlose Konzerte",
